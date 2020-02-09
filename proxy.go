@@ -3,23 +3,7 @@ package httpproxy
 import (
 	"github.com/yudeguang/httpproxy/client"
 	"github.com/yudeguang/httpproxy/server"
-	// "log"
-	// "time"
 )
-
-// func main() {
-
-// 	Server_start("v1", "9999")
-// 	Client_start("hello_v1", "127.0.0.1:8081", "127.0.0.1:9999")
-// 	time.Sleep(time.Second * 5)
-// 	log.Println(Server_proxy_get("http://127.0.0.1:8081/vindec?vin=LSGWK52C05S190228"))
-
-// 	go log.Println(Server_proxy_get("http://127.0.0.1:8081/vindec?vin=LSGWK52C05S190228"))
-// 	log.Println(Server_proxy_get("http://127.0.0.1:8081/vindec?vin=LSGWK52C05S190228"))
-// 	for {
-
-// 	}
-// }
 
 //启动客户端
 //clientName ==> example_v1     客户端名称
