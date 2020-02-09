@@ -29,7 +29,6 @@ var keepAliveConn net.Conn
 //serverAddr ==> 127.0.0.1:8888 远程服务器地址
 func Proxy_client_start(clientName, clientAddr, serverAddr string) {
 	var err error = nil
-	log.SetFlags(log.LstdFlags | log.LstdFlags)
 	log.Println("程序开始...")
 	log.Println("切换到目录:" + ChangeToBinDir())
 	configer, err = checkConfig(clientName, clientAddr, serverAddr)
