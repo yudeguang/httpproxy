@@ -1,8 +1,8 @@
 package httpproxy
 
 import (
-	"./client"
-	"./server"
+	"github.com/yudeguang/httpproxy/client"
+	"github.com/yudeguang/httpproxy/server"
 	// "log"
 	// "time"
 )
