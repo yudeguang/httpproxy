@@ -42,8 +42,8 @@ func ProxyGet(URL string) (HTML string, ClientName string, err error) {
 			HTML = string(data)
 		}
 	}
-
-	log.Println(curInUseClientNames.Load(u.Host))
+	ClientName = fmt.Sprint(curInUseClientNames.Load(u.Host))
+	//log.Println(curInUseClientNames.Load(u.Host))
 	return
 }
 
@@ -81,7 +81,7 @@ func proxyDialFunction(network, addr string) (net.Conn, error) {
 		if err == nil {
 			log.Println(network + ":查找到Client=" + clientName + " 代理:" + addr + " Conn连接成功...")
 		} else {
-			log.Println(network + "查找到Client=" + clientName + " 代理:" + addr + " 失败:" + err.Error())
+			log.Println(network + ":查找到Client=" + clientName + " 代理:" + addr + " 失败:" + err.Error())
 		}
 	}
 	return conn, err
