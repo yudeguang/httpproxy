@@ -42,7 +42,8 @@ func ProxyGet(URL string) (HTML string, ClientName string, err error) {
 			HTML = string(data)
 		}
 	}
-	ClientName = fmt.Sprint(curInUseClientNames.Load(u.Host))
+	v, _ := curInUseClientNames.Load(u.Host)
+	ClientName = fmt.Sprint(v)
 	//log.Println(curInUseClientNames.Load(u.Host))
 	return
 }
