@@ -26,10 +26,11 @@ type serverSession struct {
 	needAutoClose bool
 }
 
+//错误先关闭不打印
 func (this *serverSession) printInfo(args ...interface{}) {
 	if !(strings.Contains(stringsx.JoinInterface(" ", args), "收到") ||
 		strings.Contains(stringsx.JoinInterface(" ", args), "断开")) {
-		log.Println(fmt.Sprintf("[%d@%s]", this.sessIndex, this.remoteIP), fmt.Sprint(args...))
+		//log.Println(fmt.Sprintf("[%d@%s]", this.sessIndex, this.remoteIP), fmt.Sprint(args...))
 	}
 
 }
